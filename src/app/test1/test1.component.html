@@ -1,0 +1,59 @@
+
+
+<form [formGroup]="person" (ngSubmit)="save()">
+
+    ID:<input type="text" formControlName="id"/> 
+    <span *ngIf="id?.touched && id?.invalid">
+        pls enter the ID
+    </span><br>
+     Name:<input type="text" formControlName="name"/> 
+    <span *ngIf="name?.touched && name?.invalid">
+        pls enter the  Name 
+    </span><br>
+    Age :<input type="text" formControlName="age"/> 
+    <span *ngIf="age?.touched && age?.invalid">
+        pls enter the correct Age
+    </span><br>
+
+    <div formGroupName="address" >
+            Id:<input type="text" formControlName="id"/><br>
+           State :<input type="text" formControlName="state"/><br>
+            Pin No : <input type="text"  formControlName="pinNo"/><br>
+        </div>
+    
+
+    <input type="submit" value="submit"/>
+    </form>
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- <h1>Details Of person</h1>
+    
+    <table border="1">
+      
+        <tr>
+            
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th> Age </th>
+            <th>Email</th>
+            <th>mobile Number</th>
+            <th>Salary</th>
+            <th>Address</th>
+        </tr>
+      <tr *ngFor="let st of person">
+        <td>  {{ st.firstName }} </td>
+        <td>  {{ st.lastName }} </td>
+        <td>  {{ st.age }} </td>
+        <td>  {{ st.email  }} </td>
+        <td>  {{ st.mobile }} </td>
+        <td>  {{ st.salary }} </td>
+        <td>  {{ st.address }} </td>
+    
+      </tr> -->
+    
